@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Adblock Plugin",
+  "description": "This chrome extension will remove the advertisements.",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "css": ["index.css"],
+      "js": ["index.js"],
+      "matches": ["https://*.youtube.com/*"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "popup"
+  }
+}
